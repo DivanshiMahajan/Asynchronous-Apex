@@ -1,0 +1,6 @@
+global class LeadToAccountScheduled implements Schedulable {
+    global void execute(SchedulableContext sc) {
+        LeadToAccount batchJob = new LeadToAccount();
+        Database.executeBatch(batchJob);
+    }
+}
